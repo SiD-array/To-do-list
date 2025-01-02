@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, rgb(17, 4, 141), rgb(116, 3, 116));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: white;
+    padding: 3rem 2.5rem 5rem;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.heading{
+    display: flex;
+    margin-left: 0.5rem;
+}
+
+.heading img{
+    width: 2rem;
+    margin-left: 0.3rem;
+}
+
+.heading h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.add{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.add input,button{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.add input{
+    flex: 1;
+    height: 2rem;
+    background-color: rgb(235 235 235);
+    padding: 1.5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+#btn{
+    width: 25%;
+    cursor: pointer;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color: #ff5945;
+    color: white;   
+}
+
+.list-container{
+    margin-top: 1.5rem;
+}
+
+ul li{
+    list-style: none;
+    font-size: 1.1rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 1.2rem;
+    left: 0.1rem;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before{
+    background-image: url("images/checked.png");
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    color: #555;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #555555a2;
+    color: white;
+}
